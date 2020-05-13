@@ -9,9 +9,5 @@ const server = app.listen(port, function () {
 });
 
 app.get('/', function(req, res) {
-    res.sendFile((__dirname, './App.js'), function(err) {
-      if (err) {
-        res.status(500).send(err)
-      }
-    })
-  })
+
+})

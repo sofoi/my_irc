@@ -3,18 +3,25 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App, { Register, Login } from './App';
 import * as serviceWorker from './serviceWorker';
-import {Router, Route, browserHistory, } from 'react-router-dom';
+import { BrowserRouter , Route, Switch } from 'react-router-dom';
 
 ReactDOM.render((
-  <Router history = {browserHistory}>
-      <Route path = "/" component = {App}>
-         <IndexRoute component = {Contact} />
-         <Route path = "home" component = {Home} />
-         <Route path = "register" component = {Register} />
-         <Route path = "login" component = {Login} />
-      </Route>
-   </Router>
-), document.getElementById('clu'));
+  <BrowserRouter>
+  
+    <Switch>
+      <Route path='/' render={() => (
+        <App />
+      )} />
+      <Route path='/Register' render={() => (
+        <Register />
+      )} />
+      <Route path='/Login' render={() => (
+        <Login />
+      )} />
+    </Switch>
+  
+</BrowserRouter> , document.getElementById('clu'))
+)
  
 
 
