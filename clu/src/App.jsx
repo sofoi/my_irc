@@ -1,7 +1,8 @@
-import React from 'react';
+import {React} from "react";
 import ReactDOM from 'react-dom';
 
 import { Link } from 'react-router-dom';
+
 class App extends React.Component {
   render() {
     return(
