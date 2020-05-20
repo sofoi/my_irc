@@ -60,7 +60,7 @@ export function configureFakeBackend() {
                         let user = matchedUsers.length ? matchedUsers[0] : null;
 
                         
-                        resolve({ ok: true, text: () => JSON.stringify(user)});
+                       
                     } else {
                         
                         reject('Unauthorised');
